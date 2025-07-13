@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>c0de666</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 24px;
+      text-align: center;
+    }
+    #message {
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+  <div id="message"></div>
+
+  <script>
+    const text = "- no system is Safe -c0de666";
+    const messageDiv = document.getElementById('message');
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        messageDiv.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+
+    typeWriter();
+  </script>
+</body>
+</html>
